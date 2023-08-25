@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+@import url("https://use.typekit.net/kcd4udu.css");
+
+@import '../../node_modules/uikit/src/scss/variables';
+
+$bebas-font-family: 'Bebas Neue Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$base-body-font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$base-heading-font-family: $bebas-font-family;
+$text-primary-color: #274562;
+$base-h1-font-size-m: $global-2xlarge-font-size * 1.62;
+$subnav-pill-item-active-background: $text-primary-color;
+$button-default-color: $text-primary-color;
+$button-default-background: transparent;
+$base-h1-line-height: 1;
+$margin-medium-margin-bottom: 32px;
+$margin-medium-margin-bottom-adaptive: calc(16px + (32 - 16) * ((100vw - 320px) / (1200 - 320)));
+$subnav-pill-item-padding-vertical: 8px;
+$subnav-pill-item-padding-horizontal: 16px;
+$base-margin-vertical: 30px;
+
+@import '../../node_modules/uikit/src/scss/uikit';
+
+.uk-button-default {
+  border: 1px $text-primary-color solid;
+  font-family: $bebas-font-family;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: $global-large-font-size;
+  line-height: 2.25;
+}
+
+.uk-subnav {
+  margin-left: 0;
+}
+
+.uk-subnav > * > a {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.uk-subnav > * {
+  padding-left: 0;
+}
+
+.uk-margin-medium-bottom { margin-bottom: $margin-medium-margin-bottom !important; }
+
+.uk-subnav-wrapper {
+  overflow-x: auto;
+}
+
+.section {
+  padding: 40px 0;
+  width: 91.5%;
+  margin-left: auto;
+}
+
+@media screen and (max-width: $breakpoint-large) {
+  .uk-margin-medium-bottom {
+    margin-bottom: $margin-medium-margin-bottom-adaptive !important;
+  }
+
+  .content-column {
+    padding: 0 16px;
+
+    .switcher-slider {
+      margin: 0 -16px;
+    }
+
+    .uk-subnav-wrapper {
+      margin: 0 -16px;
+      padding: 0 16px;
+    }
+  }
+
+  .section {
+    width: 100%;
+  }
+}
